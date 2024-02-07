@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+  <head>
+  <title>Socket.IO chat</title>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font: 13px Helvetica, Arial; }
+      form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
+      form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
+      form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
+      #messages { list-style-type: none; margin: 0; padding: 0; }
+      #messages li { padding: 5px 10px; }
+      #messages li:nth-child(odd) { background: #eee; }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet"  href="style.css">
+  </head>
+  <body>
+    <section class="hero is-normal is-fullheight">
+      <div class="hero-body">
+        <nav class="navbar is-fixed-top is-link">
+          <div class="container">
+            <div class="navbar-brand">
+              <a class="navbar-item">
+                <img src="https://banner2.kisspng.com/20180403/wxw/kisspng-computer-icons-online-chat-livechat-conversation-c-chat-5ac439825dc581.4737748815228092183841.jpg"/>
+              </a>
+            </div>
+            <div class="navbar-menu">
+              <div class="navbar-end">
+                <a class="navbar-item is-active">
+                  Home
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <ul id="messageList"></ul>
+      </div>
+
+      <form class="hero-foot" id="form">
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label">Message</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <p class="control is-expanded has-icons-left">
+                <input id="idInput" class="input" type="number" placeholder="ID">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-user"></i>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <p class="control is-expanded has-icons-left">
+                <input id="nickInput" class="input" type="text" placeholder="Name">
+              </p>
+            </div>
+            <div class="field">
+              <p class="control is-expanded has-icons-left">
+                <input id="messageInput" class="input" type="text" placeholder="Message">
+              </p>
+            </div>  
+            <div class="field">
+              <div class="control">
+                <button type="submit" class="button is-primary is-fullwidth">
+                  Submit
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+    </section>
+
+<!--     <div class="header">
+      <h1>Chat with NodeJS</h1>
+    </div>
+    
+    <form id="form">
+        <input id="messageInput" autocomplete="off" /><button type="submit">Send</button>
+    </form> -->
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-1.11.1.js"></script> -->
+    <script type="text/javascript" src="./client.js"></script>
+  </body>
+</html>

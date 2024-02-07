@@ -1,0 +1,29 @@
+.hero .navbar {
+  background-color: #3273dc;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    justify-cont
+}
+
+.nick {
+    margin: 10px;
+    min-width: 10%;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.text {
+    margin: 10px;
+    font-size: 1em;
+}
+
+.me {
+    float: right;
+}
+
+.is-success {
+  background-color: hsl(141, 71%, 48%) !important;
+}

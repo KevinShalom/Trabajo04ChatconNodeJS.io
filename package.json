@@ -1,0 +1,21 @@
+{
+  "name": "socket-chat-example",
+  "version": "0.0.1",
+  "description": "my first socke.io app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "DrCesar",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.5.0",
+    "body-parser": "^1.18.3",
+    "bulma": "^0.7.2",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "lodash": "^4.17.11",
+    "socket.io": "^2.1.1"
+  }
+}
